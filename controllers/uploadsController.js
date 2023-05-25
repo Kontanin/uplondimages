@@ -9,7 +9,8 @@ const uploadProductImage = async (req, res) => {
     if(!productImage.mimetype.startsWith('')){
         throw new CustomError.BadRequestError('Please upload image')
     }
-    const maxSize= 1024 
+    const maxSize= 65000
+    console.log(productImage.size)
     if (productImage.size>maxSize){
         throw new CustomError.BadRequestError('Please upload image semeller')
 
@@ -17,8 +18,7 @@ const uploadProductImage = async (req, res) => {
     const imagePath=path.join(__dirname,'../pubulic/uploads/'+`${productImage.name}`
     );
     await productImage.mv(imagePath);
-    return res.status(StatusCodes.OK).json({image:{src:`/upload/
-    ${productImage.name}`}})
+    return res.status(StatusCodes.OK).json({image:{src:`/upload/${productImage.name}`}})
 }
 
 
