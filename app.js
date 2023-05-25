@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(express.json());
+
 app.use(fileUpload())
 app.use('/api/v1/products',productRoutes)
 // middleware
