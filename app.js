@@ -34,7 +34,8 @@ app.use('/api/v1/products',productRoutes)
 // middleware
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
-
+app.use(express.json());
+app.use(express.static('./public'));
 const port = process.env.PORT || 3000;
 
 const start = async () => {
