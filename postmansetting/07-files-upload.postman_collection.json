@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "ede5f0f6-4b06-4a48-be47-8a99f436ff7b",
+		"name": "07-files-upload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20937333"
+	},
+	"item": [
+		{
+			"name": "{{URL}}/products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/kontanin/Downloads/MicrosoftTeams-image (9).png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/products",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/products Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/products",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/products Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/kontanin/OneDrive - Dextra/Desktop/07myselfupload/images/computer-1.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/products/uploads",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"products",
+						"uploads"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
